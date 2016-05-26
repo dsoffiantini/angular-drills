@@ -1,6 +1,12 @@
-<html>
-	<body>
-		Something
+<html ng-app="app">
+	<body ng-controller="mainCtrl">
+		<input type="text" value="Enter Search Text Here" ng-model="search">
+		<p ng-repeat="prop in data | filter:search">
+			Name: {{prop.name}},
+			Email:{{prop.email}},
+			Date Employed: {{prop.dateEmployed}}
+			Phone: {{prop.phone}}
+		</p>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
